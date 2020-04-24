@@ -31,8 +31,7 @@ export class TodoComponent implements OnInit {
   }
 
   onAdd(itemTitle) {
-    if(itemTitle.value.length > 0)
-    {
+    if (itemTitle.value.length > 0) {
       this.toDoService.addTitle(itemTitle.value);
       itemTitle.value = null;
     }
@@ -45,3 +44,4 @@ export class TodoComponent implements OnInit {
   onDelete($key: string) {
     this.toDoService.removeTitle($key);
   }
+}
